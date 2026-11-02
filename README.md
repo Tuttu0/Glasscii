@@ -18,7 +18,7 @@ Glasscii converts an image or animated GIF into ASCII, Halftone, Diamonds, or Vo
 - Presets for reusing image and clock appearances.
 - Mouse interaction with the artwork and editor surface.
 
-  ![Glasscii Interface](docs/Glasscii-Interface.mp4)
+  ![Glasscii Interface](docs/sonic-ascii.gif)
 
 ## Run on Windows
 
