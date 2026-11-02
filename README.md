@@ -18,9 +18,11 @@ Glasscii converts an image or animated GIF into ASCII, Halftone, Diamonds, or Vo
 - Presets for reusing image and clock appearances.
 - Mouse interaction with the artwork and editor surface.
 
+  ![Glasscii Interface](docs/Glasscii.mp4)
+
 ## Run on Windows
 
-**Using the executable:** download `Glasscii.exe` from this repository's **Releases**, then double-click it. Python is not required for the packaged application.
+**Using the executable:** download `Glasscii.exe`.
 
 **Using the source:** install Python 3.11 or newer, open PowerShell in the project folder, and run:
 
@@ -32,13 +34,15 @@ py -3 -m venv .venv
 
 Activation is optional because these commands use the environment's Python directly. `ui.py`, `engine.py`, and the other project modules are local source files, not packages to install separately.
 
-## Use
+## Usage
 
 1. Open an image or GIF with the file picker, or drag it into the editor.
 2. Choose a style, colors, and cell size. Smaller cells provide more detail and require more rendering work.
 3. Adjust the tone controls; enter your own characters for ASCII mode.
 4. Show the desktop widget, then move or resize it. Lock it to prevent dragging.
 5. Add another image or clock widget using the widget controls or tray menu.
+
+![Glasscii Interface](docs/Example.png)
 
 Hiding a widget's frame also hides its buttons. Right-click the widget for **Settings** or **Show frame**, or use the tray icon beside the Windows clock. To exit completely, select **Quit** in the tray menu.
 
@@ -75,12 +79,5 @@ The tests use Qt's offscreen platform and temporary settings. They cover frame/l
 | `presets.py` | Capture, save, and apply appearance presets |
 | `windows_effects.py` | Native Windows glass integration |
 
-## Platform and limits
 
-Windows is the primary target. Native glass effects depend on the Windows version and compositor; other systems may fall back to ordinary transparency. Large images, long GIFs, and dense grids are constrained to limit memory use. Rendering performance depends on cell size, widget size, and the number of active widgets.
 
-## Report a problem
-
-Open an issue with your Windows and Python versions (or the release name), the selected style and cell size, the steps to reproduce, and any traceback. Include a sample image or GIF when you are able to share it.
-
-Build reference: [PyInstaller usage](https://pyinstaller.org/en/stable/usage.html).
